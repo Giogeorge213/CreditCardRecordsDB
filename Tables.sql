@@ -35,13 +35,12 @@ CREATE TABLE PointsEarningRates (
     PointsPerDollar DECIMAL(10, 2) NOT NULL,
     PointsTypeID INT NOT NULL,
     TransactionID INT NOT NULL,
-    TransactionAmount DECIMAL(10, 2) NOT NULL,
+    TransactionAmount DOUBLE(10, 2) NOT NULL,
     PRIMARY KEY (CardID, CategoryID, PointsTypeID),
     FOREIGN KEY (CardID) REFERENCES Cards(CardID),
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID),
     FOREIGN KEY (PointsTypeID) REFERENCES PointsType(PointsTypeID),
     FOREIGN KEY (TransactionID) REFERENCES Transactions(id),
-    FOREIGN KEY (TransactionAmount) REFERENCES Transactions(TransactionAmount)
     
 );
 
