@@ -10,6 +10,11 @@ UPDATE transactions SET `State` = `Zip_Code` WHERE `State` IS NOT NULL AND `Zip_
 
 UPDATE transactions SET `Zip_Code` = temp_state WHERE temp_state IS NOT NULL;
 
+--Drop temp_state column
+
+ALTER TABLE Transactions
+DROP COLUMN temp_state;
+
 --Modify to drop time portion
 
 ALTER TABLE transactions
@@ -19,11 +24,6 @@ MODIFY COLUMN date DATE;
 
 ALTER TABLE transactions
 ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY FIRST;
-
---Drop temp_state column
-
-ALTER TABLE Transactions
-DROP COLUMN temp_state;
 
 
 
