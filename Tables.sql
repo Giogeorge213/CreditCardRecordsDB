@@ -35,7 +35,7 @@ CREATE TABLE PointsEarningRates (
     PointsPerDollar DECIMAL(10, 2) NOT NULL,
     PointsTypeID INT NOT NULL,
     TransactionID INT NOT NULL,
-    TransactionAmount DOUBLE(10, 2) NOT NULL,
+    TransactionAmount DECIMAL(10, 2) NOT NULL,
     PRIMARY KEY (CardID, CategoryID, PointsTypeID),
     FOREIGN KEY (CardID) REFERENCES Cards(CardID),
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID),
@@ -47,6 +47,9 @@ CREATE TABLE PointsEarningRates (
 --Alter imported table 
 ALTER TABLE transactions
 RENAME COLUMN amount TO TransactionAmount;
+
+ALTER TABLE Transactions
+MODIFY COLUMN TransactionAmount DECIMAL(10, 2);
 
 --More foreign key assigments
 
