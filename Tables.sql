@@ -44,7 +44,11 @@ CREATE TABLE PointsEarningRates (
     
 );
 
-##Alter imported table 
+--Alter imported table 
+ALTER TABLE transactions
+RENAME COLUMN amount TO TransactionAmount;
+
+--More foreign key assigments
 
 ALTER TABLE Transactions
 ADD COLUMN CardID INT,
@@ -52,7 +56,6 @@ ADD COLUMN CategoryID INT,
 ADD FOREIGN KEY (CardID) REFERENCES Cards(CardID),
 ADD FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID);
 
-ALTER TABLE transactions
-RENAME COLUMN amount TO TransactionAmount;
+
 
 
