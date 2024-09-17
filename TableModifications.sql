@@ -1,3 +1,6 @@
+--Cleaning up the Transactions 
+
+
 --My State and Zip_Code columns need to be swapped created temporary column to swap them
 ALTER TABLE transactions ADD COLUMN temp_state VARCHAR(255);
 
