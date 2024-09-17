@@ -6,4 +6,5 @@ using Python and Jupyter Notebook. Imported using sqlalchemy to MySQLWorkbench.
 
 
 
-![CreditCardRecords](https://github.com/user-attachments/assets/9e4b8e1f-9cfe-4c8b-80a0-8b7562fc8889)
+[Schema.pdf](https://github.com/user-attachments/files/17035086/Schema.pdf)
+
