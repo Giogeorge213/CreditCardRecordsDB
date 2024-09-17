@@ -20,6 +20,14 @@ MODIFY COLUMN date DATE;
 ALTER TABLE transactions
 ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY FIRST;
 
+--Drop temp_state column
+
+ALTER TABLE Transactions
+DROP COLUMN temp_state;
+
+
+
+
 --Update foreign keys in Transactions Table 
 
 UPDATE Transactions t 
